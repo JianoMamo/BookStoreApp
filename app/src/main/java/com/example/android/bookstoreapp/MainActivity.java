@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
             //
             displayBookView.setText("The books table contains " + cursor.getCount() + " books.\n\n");
             displayBookView.append("Book " + BookEntry._ID + " : " + BookEntry.COLUMN_NAME + " - " + BookEntry.COLUMN_PRICE + " - "
-                    + BookEntry.COLUMN_QUANTITY + " - " + BookEntry.COLUMN_SUPPLIER_NAME + " - "   + BookEntry.COLUMN_SUPPLIER_PHONE);
+                    + BookEntry.COLUMN_QUANTITY + " - " + BookEntry.COLUMN_SUPPLIER_NAME + " - "   + BookEntry.COLUMN_SUPPLIER_PHONE + "\n");
 
             // Figure out the index of each column
             int idColumnIndex = cursor.getColumnIndex(BookEntry.COLUMN_ID);
@@ -95,8 +95,8 @@ public class MainActivity extends AppCompatActivity {
                 String currentSupplierPhone = cursor.getString(supplierPhoneColumnIndex);
 
                 // Display the values from each column of the current row in the cursor in the TextView
-                displayBookView.append("\n" + currentID + "\t" + currentName + " - " + currentPrice + " - " + currentQuantity
-                                            + " - " + currentSupplierName + " - " + currentSupplierPhone + "\n");
+                displayBookView.append("\n" + currentID + " : " + "\t" + currentName + " - " + currentPrice + "$ " + " - " + currentQuantity
+                                            + " - " + currentSupplierName + " - " + "\n" + currentSupplierPhone + "\n");
             }
         } finally {
             // Closing the cursor.This releases all its resources and makes it invalid.
@@ -118,6 +118,5 @@ public class MainActivity extends AppCompatActivity {
         long newRowId = bookDb.insert(BookEntry.TABLE_NAME,null,bookValues);
 
         Log.v("MainActivity","New Row ID " + newRowId);
-
     }
 }
