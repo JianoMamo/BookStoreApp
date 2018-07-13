@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin8dp">8dp</dimen>
+    <dimen name="boxmargin210dp">210dp</dimen>
+    <dimen name="margin16dp">16dp</dimen>
+    <dimen name="empty22sp">22sp</dimen>
+    <dimen name="insert16sp">16sp</dimen>
+    <dimen name="margin25dp">24dp</dimen>
+    <dimen name="margin6dp">6dp</dimen>
+    <dimen name="margin2dp">2dp</dimen>
+    <dimen name="textname22sp">22sp</dimen>
+    <dimen name="margin32dp">32dp</dimen>
+    <dimen name="margin120dp">120dp</dimen>
+    <dimen name="text16sp">16sp</dimen>
+    <dimen name="margin100dp">100dp</dimen>
+</resources>

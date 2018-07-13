@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">BookStoreApp</string>
+    <string name="books">βιβλία.</string>
+    <string name="table_contains">Ο πίνακας με τα βιβλία περιέχει</string>
+    <string name="start_by_adding_a_book">Άρχισε με το να προσθέσεις ένα βιβλίο</string>
+    <string name="insert_dummy_book">Πρόσθεσε ένα βιβλίο</string>
+    <string name="delete_all">Διαγραφή Όλων</string>
+    <string name="books_image_or_else_cover">bookbs image</string>
+    <string name="book_name">Όνομα Βιβλίου: </string>
+    <string name="book_price">Τιμή Βιβλίου: </string>
+    <string name="enter_book_s_price">Τοποθέτησε τιμή βιβλίου</string>
+    <string name="quantity">Ποσότητα: </string>
+    <string name="choose">"Διάλεξε έναν αριθμό βιβλίων</string>
+    <string name="supplier_name">Προμηθευτής: </string>
+    <string name="supplier_s_phone">Τηλέφωνο Προμηθευτή: </string>
+    <string name="enter_suppliers_name">Βάλε όνομα προμηθευτή</string>
+    <string name="enter_suppliers_phone">Βάλε τηλέφωνο προμηθευτή</string>
+    <string name="enter_books_name">Εισήγαγε όνομα βιβλίου</string>
+    <string name="enter_quantity">Εισήγαγε ποσότητα</string>
+    <string name="decreases_the_quantity">μειώνεται η ποσότητα</string>
+    <string name="increasequantity">αυξάνεται η ποσότητα</string>
+    <string name="add_an_image">Πρόσθεσε μια εικόνα</string>
+    <string name="cv_image_of_the_book">εικόνα βιβλίου</string>
+    <string name="buy">αγοράζω</string>
+    <string name="money">$</string>
+    <string name="delete_book">διαγραφή βιβλίου</string>
+    <string name="save_book">αποθήκευση</string>
+    <string name="new_book">Πρόσθεσε νέο βιβλίο</string>
+    <string name="existing_book">Τροποποίηση βιβλίου</string>
+    <string name="discard_or_edit">Ακύρωση αλλαγών?</string>
+    <string name="keep_edit">Συνέχεια</string>
+    <string name="discard">Ακύρωση</string>
+    <string name="cannot_negativequant">Δεν υπάρχει αρνητική ποσότητα βιβλίων</string>
+    <string name="outofstock">Εκτός ποσότητας</string>
+    <string name="book_cover">Εξώφυλλο βιβλίου</string>
+    <string name="call_supplier">Κάλεσε προμηθευτή</string>
+    <string name="sure_todo">Είσαι σίγουρος ότι θες να διαγράψεις την νέα τοποθέτηση</string>
+    <string name="error_nedname">Το βιβλίο χρειάζεται ένα όνομα</string>
+    <string name="errorsupname">Ο προμηθευτής χρειάζεται ένα όνομα</string>
+    <string name="errorsupphone">Αναγκαίος ο αριθμός τηλεφώνου</string>
+    <string name="invalphone">Άκυρος αριθμός τηλεφώνου</string>
+    <string name="yes">ναι</string>
+    <string name="no">όχι</string>
+    <string name="number20">20</string>
+
+</resources>

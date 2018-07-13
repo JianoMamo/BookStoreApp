@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/margin2dp">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/cv_book_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin8dp"
+                android:layout_marginTop="@dimen/margin16dp"
+                android:ellipsize="end"
+                android:maxLength="10"
+                android:maxLines="1"
+                android:textSize="@dimen/textname22sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="@string/book_name"
+                android:layout_marginLeft="@dimen/margin8dp" />
+
+            <TextView
+                android:id="@+id/bookpriceid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin8dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/book_price"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cv_book_name"
+                android:layout_marginLeft="@dimen/margin8dp" />
+
+            <TextView
+                android:id="@+id/cv_book_price"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginStart="@dimen/margin8dp"
+                android:layout_marginTop="8dp"
+                android:maxLength="9"
+                app:layout_constraintStart_toEndOf="@+id/bookpriceid"
+                app:layout_constraintTop_toBottomOf="@+id/cv_book_name"
+                tools:text="20.30 $"
+                android:layout_marginLeft="@dimen/margin8dp" />
+
+            <TextView
+                android:id="@+id/quantity_Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin8dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/quantity"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cv_book_price"
+                android:layout_marginLeft="@dimen/margin8dp" />
+
+            <TextView
+                android:id="@+id/cv_book_quantity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:maxLength="3"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/quantity_Text"
+                tools:text="@string/number20"
+                android:layout_marginLeft="8dp" />
+
+            <ImageView
+                android:id="@+id/cv_book_image"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginBottom="@dimen/margin8dp"
+                android:layout_marginStart="@dimen/margin32dp"
+                android:layout_marginTop="@dimen/margin8dp"
+                android:contentDescription="@string/cv_image_of_the_book"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/cv_book_price"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:src="@drawable/ic_add_a_photo_black_24dp"
+                android:layout_marginLeft="@dimen/margin32dp" />
+
+            <Button
+                android:id="@+id/buyButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin8dp"
+                android:layout_marginEnd="@dimen/margin16dp"
+                android:layout_marginTop="@dimen/margin8dp"
+                android:background="@drawable/button_rounded_corners"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:text="@string/buy"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginRight="@dimen/margin16dp" />
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

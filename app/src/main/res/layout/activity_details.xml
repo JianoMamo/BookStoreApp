@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context="com.example.android.bookstoreapp.MainActivity">
+
+        <FrameLayout
+            android:id="@+id/frameLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="190dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/margin16dp"
+                android:contentDescription="@string/book_cover"
+                android:src="@drawable/placeholder_book"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+
+        </FrameLayout>
+
+        <ImageButton
+            android:id="@+id/addimagebutton"
+            android:layout_width="55dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="40dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/ic_add_a_photo_black_24dp"
+            android:contentDescription="@string/books_image_or_else_cover"
+            app:layout_constraintBottom_toBottomOf="@+id/frameLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.78"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/book_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="12dp"
+            android:text="@string/book_name"
+            android:textSize="@dimen/text16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/frameLayout" />
+
+        <EditText
+            android:id="@+id/edit_bookname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin8dp"
+            android:layout_marginStart="@dimen/margin8dp"
+            android:hint="@string/enter_books_name"
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/book_id" />
+
+        <TextView
+            android:id="@+id/book_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin8dp"
+            android:layout_marginLeft="@dimen/margin8dp"
+            android:layout_marginTop="@dimen/margin8dp"
+            android:text="@string/book_price"
+            android:textSize="@dimen/text16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edit_bookname" />
+
+        <EditText
+            android:id="@+id/edit_book_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin8dp"
+            android:layout_marginStart="@dimen/margin8dp"
+            android:hint="@string/enter_book_s_price"
+            android:inputType="numberDecimal"
+            android:maxLength="5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/book_price" />
+
+        <TextView
+            android:id="@+id/Quantity_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin8dp"
+            android:layout_marginTop="@dimen/margin8dp"
+            android:text="@string/quantity"
+            android:textSize="@dimen/text16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edit_book_price"
+            android:layout_marginLeft="@dimen/margin8dp" />
+
+        <ImageButton
+            android:id="@+id/minusButtonId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin32dp"
+            android:layout_marginTop="@dimen/margin16dp"
+            android:background="@drawable/minus"
+            android:contentDescription="@string/decreases_the_quantity"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Quantity_id"
+            android:layout_marginLeft="@dimen/margin32dp" />
+
+        <EditText
+            android:id="@+id/edit_quantity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin100dp"
+            android:layout_marginStart="@dimen/margin100dp"
+            android:layout_marginTop="@dimen/margin8dp"
+            android:gravity="center"
+            android:hint="@string/enter_quantity"
+            android:inputType="number"
+            app:layout_constraintEnd_toStartOf="@+id/minusButtonId"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/minusButtonId"
+            app:layout_constraintTop_toBottomOf="@+id/Quantity_id" />
+
+        <ImageButton
+            android:id="@+id/plusButtonID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin32dp"
+            android:layout_marginRight="@dimen/margin32dp"
+            android:layout_marginTop="@dimen/margin16dp"
+            android:background="@drawable/plus"
+            android:contentDescription="@string/increasequantity"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Quantity_id" />
+
+        <TextView
+            android:id="@+id/suppliers_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin8dp"
+            android:layout_marginLeft="@dimen/margin8dp"
+            android:layout_marginTop="@dimen/margin16dp"
+            android:text="@string/supplier_name"
+            android:textSize="@dimen/text16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/plusButtonID" />
+
+        <EditText
+            android:id="@+id/edit_supp_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin8dp"
+            android:layout_marginStart="@dimen/margin8dp"
+            android:hint="@string/enter_suppliers_name"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/suppliers_id" />
+
+        <TextView
+            android:id="@+id/suppliers_phone_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin8dp"
+            android:layout_marginLeft="@dimen/margin8dp"
+            android:layout_marginTop="@dimen/margin8dp"
+            android:text="@string/supplier_s_phone"
+            android:textSize="@dimen/text16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edit_supp_name" />
+
+        <EditText
+            android:id="@+id/edit_supp_phone_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin8dp"
+            android:layout_marginStart="@dimen/margin8dp"
+            android:hint="@string/enter_suppliers_phone"
+            android:inputType="phone"
+            android:maxLength="14"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/suppliers_phone_id" />
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>
