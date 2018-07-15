@@ -7,6 +7,7 @@ import android.content.CursorLoader;
 import android.content.Intent;
 import android.content.Loader;
 import android.database.Cursor;
+import android.provider.BaseColumns;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -63,7 +64,7 @@ public class CatalogActivity extends AppCompatActivity implements LoaderManager.
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent bookDetailsIntent = new Intent(CatalogActivity.this, MainActivity.class);
                 Cursor cursor = (Cursor) cursorBookAdapter.getItem(position);
-                int col_index = cursor.getColumnIndex(BookContract.BookEntry.COL_BOOK_ID);
+                int col_index = cursor.getColumnIndex(BaseColumns._ID);
                 int cursor_id = cursor.getInt(col_index);
                 bookDetailsIntent.setData(ContentUris.withAppendedId(BookContract.BookEntry.CONTENT_URI, cursor_id));
                 bookDetailsIntent.putExtra("position",position);
@@ -126,7 +127,7 @@ public class CatalogActivity extends AppCompatActivity implements LoaderManager.
     @Override
     public Loader<Cursor> onCreateLoader(int id, Bundle args) {
         String projection[] = {
-                BookContract.BookEntry.COL_BOOK_ID,
+                BaseColumns._ID,
                 BookContract.BookEntry.COL_BOOK_NAME,
                 BookContract.BookEntry.COL_BOOK_QUANTITY,
                 BookContract.BookEntry.COL_BOOK_PRICE,

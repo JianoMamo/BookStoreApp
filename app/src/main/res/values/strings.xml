@@ -41,4 +41,5 @@
     <string name="yes">yes</string>
     <string name="no">no</string>
     <string name="number20">20</string>
+    <string name="wrong_insert_number">The length of phone number must hbe between 6 and 13 digits</string>
 </resources>

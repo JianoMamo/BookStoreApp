@@ -3,6 +3,7 @@ package com.example.android.bookstoreapp.BookStoreData;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.provider.BaseColumns;
 
 public class BookDbHelper extends SQLiteOpenHelper {
 
@@ -18,7 +19,7 @@ public class BookDbHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
 
         String SQLITE_CREATE_BOOK_TABLE = "CREATE TABLE " + BookContract.BookEntry.TABLE_NAME + " ("
-                + BookContract.BookEntry.COL_BOOK_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
+                + BaseColumns._ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
                 + BookContract.BookEntry.COL_BOOK_NAME + " TEXT NOT NULL, "
                 + BookContract.BookEntry.COL_BOOK_PRICE + " REAL NOT NULL DEFAULT 0, "
                 + BookContract.BookEntry.COL_BOOK_QUANTITY + " INTEGER NOT NULL DEFAULT 0, "

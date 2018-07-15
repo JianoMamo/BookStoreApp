@@ -1,6 +1,5 @@
 package com.example.android.bookstoreapp;
 
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.LoaderManager;
 import android.content.ContentValues;
@@ -24,6 +23,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.android.bookstoreapp.BookStoreData.BookContract;
@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     EditText editTextSuppPhone;
     @BindView(R.id.plusButtonID)
     ImageButton plusButton;
-    @BindView(R.id.minusButtonID)
+    @BindView(R.id.minusButtonId)
     ImageButton minusButton;
     @BindView(R.id.addimagebutton)
     ImageButton addImageButton;
@@ -77,7 +77,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_details);
+        setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
 
         final Intent intent = getIntent();
@@ -387,6 +387,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
             check = phoneNumber.length() >= 6 && phoneNumber.length() <= 13;
         } else {
             check = false;
+            Toast.makeText(MainActivity.this, R.string.wrong_insert_number,Toast.LENGTH_LONG).show();
         }
         return check;
     }

@@ -30,7 +30,7 @@ public class BookContract {
 
         public static final String TABLE_NAME = "books";
 
-        public static final String COL_BOOK_ID = BaseColumns._ID;
+
         public static final String COL_BOOK_NAME = "name";
         public static final String COL_BOOK_QUANTITY = "quantity";
         public static final String COL_BOOK_PRICE = "price";

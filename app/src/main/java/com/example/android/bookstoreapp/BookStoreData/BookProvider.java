@@ -7,6 +7,7 @@ import android.content.UriMatcher;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
+import android.provider.BaseColumns;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 
@@ -42,7 +43,7 @@ public class BookProvider extends ContentProvider {
                 cursor = db.query(BookContract.BookEntry.TABLE_NAME, projection, selection, selectionArgs, null, null, sortOrder);
                 break;
             case BookContract.BOOK_ID:
-                selection = BookContract.BookEntry.COL_BOOK_ID + "=?";
+                selection = BaseColumns._ID + "=?";
                 selectionArgs = new String[]{String.valueOf(ContentUris.parseId(uri))};
                 cursor = db.query(BookContract.BookEntry.TABLE_NAME, projection, selection, selectionArgs, null, null, sortOrder);
                 break;
@@ -128,7 +129,7 @@ public class BookProvider extends ContentProvider {
                 rows_deteled = db.delete(BookContract.BookEntry.TABLE_NAME, selection, selectionArgs);
                 break;
             case BookContract.BOOK_ID:
-                selection = BookContract.BookEntry.COL_BOOK_ID + "=?";
+                selection = BaseColumns._ID + "=?";
                 selectionArgs = new String[]{String.valueOf(ContentUris.parseId(uri))};
                 rows_deteled = db.delete(BookContract.BookEntry.TABLE_NAME, selection, selectionArgs);
                 break;
@@ -155,7 +156,7 @@ public class BookProvider extends ContentProvider {
                 }
 
             case BookContract.BOOK_ID:
-                selection = BookContract.BookEntry.COL_BOOK_ID + "=?";
+                selection = BaseColumns._ID + "=?";
                 selectionArgs = new String[]{String.valueOf(ContentUris.parseId(uri))};
                 if (values != null) {
                     return updateBook(uri, values, selection, selectionArgs);
